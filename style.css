@@ -17,24 +17,35 @@ html, body{
     background: linear-gradient(90deg, rgba(41,55,75,1) 25%, rgba(41,77,130,1) 51%, rgba(80,201,206,1) 90%);
 }
 
-.card-timer{
+.container{
     background: white;
     width: 500px;
     height: 500px;
     margin: 100px auto;
     border-radius: 100px;
-    position: relative;    
 }
 
-span{
-    position: absolute;
+.card-timer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 50pt;
+    padding-top: 150px;
 }
-span#minutes{
-    top: 40%;
-    left: 35%;
+
+.card-button{
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
 }
-span#seconds{
-    top: 40%;
-    left: 52%;
+.card-button button, svg{
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: white;
 }
+
+
+
+
+

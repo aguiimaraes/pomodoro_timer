@@ -9,13 +9,17 @@
     <title>Pomodoro Timer</title>
 </head>
 <body>
-    
+    <div class="container">
     <div class="card-timer">
     <span id="minutes">00</span><span id="seconds">00</span>
+    </div>
+    <div class="card-button">
     <button onclick="startCounter()"><i data-feather="play"></i></button>
     <button onclick="pauseCounter()"><i data-feather="pause"></i></button>
     <button onclick="resetCounter()"><i data-feather="refresh-cw"></i></button>
     </div>
+    </div>
+    
 
     <script>
         feather.replace()
