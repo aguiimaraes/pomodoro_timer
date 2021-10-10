@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body, button, input, select, textarea{
+    font-family: 'Roboto', sans-serif;
+}
+
+:root{
+    --gradient-color: rgb(41,55,75);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html, body{
+    margin: 0;
+    background: linear-gradient(90deg, rgba(41,55,75,1) 25%, rgba(41,77,130,1) 51%, rgba(80,201,206,1) 90%);
+}
+
+.card-timer{
+    background: white;
+    width: 500px;
+    height: 500px;
+    margin: 100px auto;
+    border-radius: 100px;
+    position: relative;    
+}
+
+span{
+    position: absolute;
+    font-size: 50pt;
+}
+span#minutes{
+    top: 40%;
+    left: 35%;
+}
+span#seconds{
+    top: 40%;
+    left: 52%;
+}
