@@ -14,15 +14,15 @@ body, button, input, select, textarea{
 
 html, body{
     margin: 0;
-    background: linear-gradient(90deg, rgba(41,55,75,1) 25%, rgba(41,77,130,1) 51%, rgba(80,201,206,1) 90%);
+    background: linear-gradient(90deg, rgba(0,98,170,1) 31%, rgba(0,64,106,1) 60%, rgba(22,55,78,1) 100%);
 }
 
 .container{
     background: white;
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 400px;
     margin: 100px auto;
-    border-radius: 100px;
+    border-radius: 80px;
 }
 
 .card-timer{
@@ -30,7 +30,7 @@ html, body{
     justify-content: center;
     align-items: center;
     font-size: 50pt;
-    padding-top: 150px;
+    padding-top: 120px;
 }
 
 .card-button{
@@ -38,14 +38,21 @@ html, body{
     justify-content: center;
     margin: 20px auto;
 }
-.card-button button, svg{
+.card-button button{
     margin: 5px;
-    border: none;
+    border: 3px solid #16374e;
+    border-radius: 8px;
     cursor: pointer;
     background-color: white;
+    padding: 10px;
+    transition-duration: 0.4s;
+    color: #16374e;
 }
-
-
-
-
-
+button:hover{
+    background-color: #16374e;
+    color: white;
+}
+.card-button svg{
+    width: 25px;
+    height: 25px;
+}

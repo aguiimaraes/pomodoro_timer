@@ -1,49 +1,49 @@
 let minutes, seconds, counterInterval = undefined
 
-        const minutesEl = document.getElementById('minutes')
-        const secondsEl = document.getElementById('seconds')
+const minutesEl = document.getElementById('minutes')
+const secondsEl = document.getElementById('seconds')
 
-        resetCounter()
+resetCounter()
 
-        updateCounterEl()
-        
-        function updateCounterEl(){
-            minutesEl.innerHTML = minutes < 10 ? `0${minutes}` : minutes
-            secondsEl.innerHTML = seconds < 10 ? `0${seconds}` : seconds
-        }
+updateCounterEl()
 
-        function startCounter(){
-            if(counterInterval) return
+function updateCounterEl() {
+    minutesEl.innerHTML = minutes < 10 ? `0${minutes}` : minutes
+    secondsEl.innerHTML = seconds < 10 ? `0${seconds}` : seconds
+}
 
-            counterInterval = setInterval( () => {
-                const timeOver = !seconds && !minutes
-                const secondsOver = !seconds
+function startCounter() {
+    if (counterInterval) return
 
-                if(timeOver) return destroyInterval()
+    counterInterval = setInterval(() => {
+        const timeOver = !seconds && !minutes
+        const secondsOver = !seconds
 
-                if(secondsOver){
-                    seconds = 59
-                    --minutes
-                    updateCounterEl()
-                    return
-                }
-                --seconds
-                updateCounterEl()
-            }, 1000)
-        }
+        if (timeOver) return destroyInterval()
 
-        function pauseCounter(){
-            destroyInterval()
-        }
-
-        function destroyInterval(){
-            clearInterval(counterInterval)
-            counterInterval = undefined
-        }
-
-        function resetCounter(){
-            destroyInterval()
-            minutes = 25
-            seconds = 00
+        if (secondsOver) {
+            seconds = 59
+                --minutes
             updateCounterEl()
+            return
         }
+        --seconds
+        updateCounterEl()
+    }, 1000)
+}
+
+function pauseCounter() {
+    destroyInterval()
+}
+
+function destroyInterval() {
+    clearInterval(counterInterval)
+    counterInterval = undefined
+}
+
+function resetCounter() {
+    destroyInterval()
+    minutes = 25
+    seconds = 00
+    updateCounterEl()
+}
