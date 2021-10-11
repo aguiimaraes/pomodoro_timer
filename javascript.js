@@ -47,3 +47,9 @@ function resetCounter() {
     seconds = 00
     updateCounterEl()
 }
+
+function moreMinutes(){
+    minutes = 50
+    seconds = 00
+    updateCounterEl()
+}

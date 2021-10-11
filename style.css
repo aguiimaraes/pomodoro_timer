@@ -56,3 +56,7 @@ button:hover{
     width: 25px;
     height: 25px;
 }
+
+#more-minutes{
+    font-size: 12pt;
+}
